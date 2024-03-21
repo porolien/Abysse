@@ -10,6 +10,6 @@ public class PlayerMain : MonoBehaviour
 
     private void Awake()
     {
-        SendMessage("Init", this);
+        BroadcastMessage("Init", this);
     }
 }

@@ -10,8 +10,11 @@ public class PlayerMovement : MonoBehaviour
 
     public event Action Move;
 
-    [SerializeField]
-    private float _speed;
+    public float speed;
+
+    public float slowSpeed;
+
+    public float normalSpeed;
 
     [SerializeField]
     private float _angularSpeed;
@@ -20,8 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private Transform _body;
 
     private PlayerMain _main;
-
-
 
     public void Init(PlayerMain main)
     {
@@ -32,13 +33,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = normalSpeed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(direction * _speed * Time.deltaTime, Space.World);
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
         if (direction !=  Vector2.zero)
         {
             Move();

@@ -17,6 +17,9 @@ public class PlayerLight : MonoBehaviour
     private float _objectThrownSpeed;
 
     [SerializeField]
+    private float _maxGlowStick;
+
+    [SerializeField]
     private GameObject lightPrefab;
 
     private PlayerMain _main;

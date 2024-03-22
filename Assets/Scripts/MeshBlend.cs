@@ -13,7 +13,7 @@ public class MeshBlend : MonoBehaviour
     void Start()
     {
         _skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
-        _skinnedMesh = GetComponent<Mesh>();
+        _skinnedMesh = _skinnedMeshRenderer.sharedMesh;
         _blendShapeCount = _skinnedMesh.blendShapeCount;
     }
 

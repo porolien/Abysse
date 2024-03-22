@@ -56,7 +56,14 @@ public class FishDetection : MonoBehaviour
             }
 
             // Déplacer l'ennemi vers la lumière la plus proche ou le joueur
-            transform.LookAt(target);
+            Vector3 oppositeDirection = Vector3.zero;
+
+            if (_main.afraidByLight)
+            {
+                oppositeDirection = transform.position - target.position;
+            }
+
+            transform.LookAt(target.position + oppositeDirection);
         }
     }
 }

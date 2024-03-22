@@ -719,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 1602072548843494071, guid: 4746c5b770349ff4783eff33b32a3214,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8236544420144434609, guid: 4746c5b770349ff4783eff33b32a3214,
         type: 3}
@@ -828,7 +828,7 @@ PrefabInstance:
     - target: {fileID: 41721730737012974, guid: 3262d7c1155f79a41bd9727b966e6a8d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5427120293198765740, guid: 3262d7c1155f79a41bd9727b966e6a8d,
         type: 3}
@@ -956,7 +956,7 @@ PrefabInstance:
     - target: {fileID: 7488304092139439278, guid: 2b60c637acd197241a58ca2d6d86d17c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7989193774634192425, guid: 2b60c637acd197241a58ca2d6d86d17c,
         type: 3}
@@ -992,7 +992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &545987515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ PrefabInstance:
     - target: {fileID: 1806026081156535904, guid: d56c620cc991d5d4291e7be98c91bc8e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3782021696290568998, guid: d56c620cc991d5d4291e7be98c91bc8e,
         type: 3}
@@ -1307,7 +1307,7 @@ PrefabInstance:
     - target: {fileID: 5236459799166005622, guid: a907bdafdc55f7e459d974a712f65467,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7059628952124481532, guid: a907bdafdc55f7e459d974a712f65467,
         type: 3}
@@ -1487,7 +1487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1784358025
 Transform:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ PrefabInstance:
     - target: {fileID: 8879340903608686631, guid: 7e5f596dcff855b4699616378f308b9b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1870,6 +1870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scuba diver
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a14cf2a328194ae47b47ccdfb9f0febc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2716246238514753176, guid: a14cf2a328194ae47b47ccdfb9f0febc,
         type: 3}
@@ -2527,6 +2532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish ennemi 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2268850c0780e3b4e9c1e58822bd3db1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2602,7 +2612,7 @@ PrefabInstance:
     - target: {fileID: 3559845135796212633, guid: c32238bd70be3a448802332120e70135,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2812,7 +2822,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 62b830360afc5584db5646e8ee542dc7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

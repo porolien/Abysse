@@ -53,6 +53,7 @@ public class PlayerLight : MonoBehaviour
             Debug.Log(hit.point);
             GameObject newObjectThrown = Instantiate(_objectThrownPrefab, _posObjectThrown);
             newObjectThrown.transform.parent = null;
+            LightManager.instance.lights.Add(newObjectThrown.transform);
             Vector2 direction = hit.point - newObjectThrown.transform.position;
             newObjectThrown.GetComponent<Rigidbody>().velocity = new Vector2(direction.x, direction.y).normalized * _objectThrownSpeed;
         }

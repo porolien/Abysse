@@ -44,8 +44,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.4245283, g: 0.026032407, b: 0.32927814, a: 1}
-  m_Intensity: 176890.02
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 14080657
   m_Range: 5.977797
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -89,11 +89,11 @@ Light:
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0.025
+  m_ShadowRadius: 3
   m_ShadowAngle: 0
 --- !u!114 &6832541249882918734
 MonoBehaviour:
@@ -107,9 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 100000
+  m_Intensity: 7000
   m_EnableSpotReflector: 1
-  m_LuxAtDistance: 1.33
+  m_LuxAtDistance: 44.85
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.5
   m_ShapeHeight: 0.5
   m_AspectRatio: 1
-  m_ShapeRadius: 0.025
+  m_ShapeRadius: 3
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 30
@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 5313607305068799764}
   - component: {fileID: 2195017708326031204}
   - component: {fileID: -8126016982751389829}
+  - component: {fileID: 8664606581255297829}
   m_Layer: 0
   m_Name: ThrownObject
   m_TagString: Untagged
@@ -351,3 +352,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &8664606581255297829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177525011232367501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7c7939452d19f47a48bef9ca93af1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

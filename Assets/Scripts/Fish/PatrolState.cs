@@ -11,7 +11,10 @@ public class PatrolState : BaseState
         _stateMachine = stateMachine;
 
         _path = _stateMachine.main.patrol;
-        InitNewPathPoint();
+        if (_path.patrolPoints.Count != 0)
+        {
+            InitNewPathPoint();
+        }
 
         _stateMachine.main.detection.seeALight += GetDetect;
     }
@@ -23,11 +26,14 @@ public class PatrolState : BaseState
 
     public override void Update()
     {
-        Vector3 _direction = _stateMachine.main.patrol.actualPoint.position - _stateMachine.transform.position;
-
-        if (Mathf.Abs(_direction.x) + Mathf.Abs(_direction.y) < 1)
+        if (_path.patrolPoints.Count != 0)
         {
-            FollowThePath();
+            Vector3 _direction = _path.actualPoint.position - _stateMachine.transform.position;
+
+            if (Mathf.Abs(_direction.x) + Mathf.Abs(_direction.y) < 1)
+            {
+                FollowThePath();
+            }
         }
     }
 

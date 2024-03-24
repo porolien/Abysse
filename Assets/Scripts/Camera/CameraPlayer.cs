@@ -16,7 +16,7 @@ public class CameraPlayer : MonoBehaviour
     private Transform _player;
    // private Vector3 vel;
 
-    private void Awake()
+    private void Start()
     {
         PlayerMain player = (PlayerMain)FindAnyObjectByType(typeof(PlayerMain));
         _player = player.transform;

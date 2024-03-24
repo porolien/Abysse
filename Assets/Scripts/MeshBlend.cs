@@ -7,6 +7,10 @@ public class MeshBlend : MonoBehaviour
     [SerializeField]
     private int _fpsNeeded;
 
+    [SerializeField]
+    private int _indexBase;
+
+
     private SkinnedMeshRenderer _skinnedMeshRenderer;
     private Mesh _skinnedMesh;
     private int _blendShapeCount;
@@ -45,7 +49,7 @@ public class MeshBlend : MonoBehaviour
 
     private IEnumerator AnimFrame()
     {
-        for(int i = 0; i < _blendShapeCount; i++)
+        for(int i = 0; i < _blendShapeCount - _indexBase; i++)
         {
             if (_playIndex > 0)
             {
@@ -62,8 +66,9 @@ public class MeshBlend : MonoBehaviour
 
             if (_playIndex > _blendShapeCount - 1)
             {
-                _playIndex = 0;
+                _playIndex = _indexBase;
             }
+
             yield return new WaitForSeconds(1 / _fpsNeeded);
         }
 

@@ -39,6 +39,23 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(direction.y);
+        if (direction.y < 0)
+        {
+            if (transform.position.y <= LimitManager.instance.minLimit)
+            {
+                transform.position = new Vector3(transform.position.x, LimitManager.instance.minLimit, transform.position.z);
+            }
+        }
+        else if (direction.y > 0)
+        {
+            if (transform.position.y >= LimitManager.instance.maxLimit)
+            {
+                transform.position = new Vector3(transform.position.x, LimitManager.instance.maxLimit, transform.position.z);
+            }
+        }
+        
+
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
         if (direction !=  Vector2.zero)
         {

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5427120293198765740}
   - component: {fileID: 3212745493737368461}
+  - component: {fileID: 170377970711428656}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -46,3 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   lights: []
+--- !u!114 &170377970711428656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41721730737012974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bb1a07da0ab0344a6c899e42813dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLimit: 6.31
+  minLimit: -4.33

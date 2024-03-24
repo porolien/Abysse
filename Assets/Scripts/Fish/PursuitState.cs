@@ -8,6 +8,8 @@ public class PursuitState : BaseState
 
     public Transform target;
 
+    private Vector3 _oldTargetPosition;
+
     private bool targetIsAPlayer;
 
     public override void OnEnter(StateMachine stateMachine)
@@ -31,12 +33,36 @@ public class PursuitState : BaseState
 
     public override void Update()
     {
-        _stateMachine.main.movement.direction = (target.position - _stateMachine.transform.position).normalized;
-        
-        if (!targetIsAPlayer && _stateMachine.main.afraidByLight) 
+        if (target != null)
         {
-            _stateMachine.main.movement.direction *= -1;
+            if (!targetIsAPlayer && target.position.y < LimitManager.instance.minLimit)
+            {
+                target = null;
+                _stateMachine.targetToPursuit = null;
+                _stateMachine.Transition(_stateMachine.patrolState);
+            }
+            else
+            {
+                _oldTargetPosition = target.position;
+                _stateMachine.main.movement.direction = (target.position - _stateMachine.transform.position).normalized;
+
+                if (!targetIsAPlayer && _stateMachine.main.afraidByLight)
+                {
+                    _stateMachine.main.movement.direction *= -1;
+                }
+            }
+            
         }
+        else
+        {
+            Vector3 _direction = _oldTargetPosition - _stateMachine.transform.position;
+
+            if (Mathf.Abs(_direction.x) + Mathf.Abs(_direction.y) < 1)
+            {
+                _stateMachine.Transition(_stateMachine.patrolState);
+            }
+        }
+        
        // checkForTransition();
 
     }

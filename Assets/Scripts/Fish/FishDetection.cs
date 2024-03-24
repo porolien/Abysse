@@ -38,13 +38,17 @@ public class FishDetection : MonoBehaviour
         {
             foreach (Transform lightTransform in LightManager.instance.lights)
             {
-                distanceToTarget = Vector3.Distance(transform.position, lightTransform.position);
-                // Vérifier si la lumière est à portée et plus proche que la lumière actuelle la plus proche
-                if (distanceToTarget < lightDetectionRange && distanceToTarget < closestDistance)
+                if (lightTransform.position.y < LimitManager.instance.maxLimit || lightTransform.position.y > LimitManager.instance.minLimit)
                 {
-                    closestDistance = distanceToTarget;
-                    target = lightTransform;
+                    distanceToTarget = Vector3.Distance(transform.position, lightTransform.position);
+                    // Vérifier si la lumière est à portée et plus proche que la lumière actuelle la plus proche
+                    if (distanceToTarget < lightDetectionRange && distanceToTarget < closestDistance)
+                    {
+                        closestDistance = distanceToTarget;
+                        target = lightTransform;
+                    }
                 }
+                
             }
         }
 

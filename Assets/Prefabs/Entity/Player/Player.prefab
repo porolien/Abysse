@@ -136,6 +136,7 @@ MonoBehaviour:
     type: 3}
   _posObjectThrown: {fileID: 9172055791716610821}
   _objectThrownSpeed: 25
+  _maxGlowStick: 0
   lightPrefab: {fileID: 6791221043660761855}
 --- !u!23 &8236544420144434609
 MeshRenderer:
@@ -308,13 +309,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6791221043660761855}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.69411874, z: -0, w: 0.7198605}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8005921099944184557}
-  m_LocalEulerAnglesHint: {x: 0, y: 87.914, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!108 &38929041330062973
 Light:
   m_ObjectHideFlags: 0
